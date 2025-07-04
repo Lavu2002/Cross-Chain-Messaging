@@ -1,15 +1,15 @@
 <template>
   <div class="swap-info-row">
-    <span class="conversion-rate"
-      >1 {{ conversionRate.token }} ≈ {{ conversionRate.value }}
-      {{ conversionRate.targetToken }}</span
-    >
+    <span class="conversion-rate" v-if="conversionRate">
+      1 {{ conversionRate.token }} ≈ {{ conversionRate.value }} {{ conversionRate.targetToken }}
+    </span>
+    <span class="conversion-rate" v-else> Conversion rate unavailable </span>
     <span class="gas-fee">Gas: {{ gasFee }} | Route: {{ optimalRoute }}</span>
   </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   conversionRate: Object, // { token, value, targetToken }
   gasFee: String,
   optimalRoute: String,

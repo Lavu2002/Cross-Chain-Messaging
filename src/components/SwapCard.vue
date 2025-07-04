@@ -87,17 +87,16 @@
     <transition name="fade-slide" mode="out-in">
       <div class="status-view" v-if="showStatusView" key="status-view">
         <div class="status-row">
-          📤 Source Tx Hash: <code>{{ sourceTxHash }}</code>
+          Source Tx Hash: <code>{{ sourceTxHash }}</code>
         </div>
         <div class="status-row">
-          📥 Destination Receipt: <code>{{ destinationReceipt }}</code>
+          Destination Receipt: <code>{{ destinationReceipt }}</code>
         </div>
         <div class="status-row">
-          ✅ Message Received on {{ receiveChain.name || receiveChain }}:
-          "{{ receivedMessage }}"
+          Message Received on {{ receiveChain }}: "{{ receivedMessage }}"
         </div>
         <v-btn class="swap-btn mt-4" block color="secondary" @click="resetSwap">
-          🔁 Send Another Message
+          Send Another Message
         </v-btn>
       </div>
     </transition>
@@ -111,13 +110,18 @@ import TokenSelector from './TokenSelector.vue'
 import NetworkSelector from './NetworkSelector.vue'
 
 // Static Data
-const tokens = ['USDT', 'USDC', 'ETH', 'SOL']
+const tokens = [
+  { symbol: 'USDT', icon: 'usdt-icon.svg' },
+  { symbol: 'USDC', icon: 'usdc-icon.svg' },
+  { symbol: 'ETH', icon: 'eth-icon.svg' },
+  { symbol: 'SOL', icon: 'sol-icon.svg' },
+]
 const chains = [
-  { name: 'Ethereum Sepolia' },
-  { name: 'Optimism Goerli' },
-  { name: 'Arbitrum Sepolia' },
-  { name: 'Base Sepolia' },
-  { name: 'Polygon Mumbai' }
+  { name: 'Ethereum Sepolia', icon: 'eth-icon.svg' },
+  { name: 'Optimism Goerli', icon: 'op-icon.svg' },
+  { name: 'Arbitrum Sepolia', icon: 'arb-icon.svg' },
+  { name: 'Base Sepolia', icon: 'base-icon.svg' },
+  { name: 'Polygon Mumbai', icon: 'polygon-icon.svg' },
 ]
 
 // States
@@ -144,7 +148,7 @@ const steps = [
   'Validating source network...',
   'Sending tokens across chain...',
   'Confirming on destination network...',
-  'Finalizing and delivering message...'
+  'Finalizing and delivering message...',
 ]
 const currentStepIndex = ref(0)
 let pollingInterval: ReturnType<typeof setInterval> | null = null
