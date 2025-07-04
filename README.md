@@ -51,3 +51,8 @@ A modern, responsive dashboard for **simulated cross-chain token swaps and messa
 npm install
 # or
 yarn install
+
+### Run
+
+```bash
+npm run dev
