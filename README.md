@@ -2,12 +2,12 @@
 
 A modern, responsive dashboard for **simulated cross-chain token swaps and messaging**, built using **Vue 3**, **Vite**, and **Vuetify**.
 
-> **“Bond, Swap, or Bridge with 4000+ tokens across all chains” — the DeFi way, beautifully presented.**
+> **"Bond, Swap, or Bridge with 4000+ tokens across all chains" — the DeFi way, beautifully presented.**
 
 ## 🌟 Features
 
 - ✅ **Cross-Chain Swap Simulation**  
-  Swap tokens across chains like Ethereum Sepolia, Optimism Goerli, and others *(mocked logic)*.
+  Swap tokens across chains like Ethereum Sepolia, Optimism Goerli, and others _(mocked logic)_.
 
 - ✅ **Token & Network Selectors**  
   Select from popular tokens like USDT, USDC, ETH, and SOL, and supported testnet chains.
@@ -16,7 +16,7 @@ A modern, responsive dashboard for **simulated cross-chain token swaps and messa
   Attach short messages (e.g., DAO payments or invoice notes) with your token transfer.
 
 - ✅ **Visual Transaction Timeline**  
-  Displays each step: *Source Tx → Destination Receipt → Message Delivered*.
+  Displays each step: _Source Tx → Destination Receipt → Message Delivered_.
 
 - ✅ **Snackbar & Loader Feedback**  
   Smooth UI feedback including spinners and toast messages.
@@ -35,13 +35,42 @@ A modern, responsive dashboard for **simulated cross-chain token swaps and messa
 - **Vue 3** + `<script setup>`
 - **Vite** (super fast dev server & bundler)
 - **Vuetify 3** (Material Design framework)
-- **Pinia** (optional state management)
 - **TypeScript** (type safety)
 - **CSS Animations & Vuetify Transitions**
+
+## 🗂️ Project Directory Structure
+
+```
+src/
+├── assets/
+│   ├── base.css
+│   ├── main.css
+│   └── logo.svg
+├── components/
+│   ├── AmountInput.vue
+│   ├── MessageInput.vue
+│   ├── NetworkSelector.vue
+│   ├── SwapButton.vue
+│   ├── SwapCard.vue
+│   ├── TokenSelector.vue
+│   ├── TransactionHistory.vue
+│   ├── WalletConnectButton.vue
+│   ├── crossChainMessenger.vue
+│   └── header.vue
+├── router/
+│   └── index.ts
+├── views/
+│   ├── Messenger.vue
+│   └── HistoryView.vue
+├── App.vue
+├── main.ts
+└── shims-vue.d.ts
+```
 
 ## 🛠️ Getting Started
 
 ### Prerequisites
+
 - Node.js (v16 or later)
 - npm or yarn
 
@@ -53,3 +82,4 @@ npm install
 yarn install
 
 npm run dev
+```
