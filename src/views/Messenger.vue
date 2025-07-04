@@ -18,7 +18,6 @@
 
 <script setup lang="ts">
 import SwapCard from '@/components/SwapCard.vue'
-import CrossChainMessenger from '@/components/crossChainMessenger.vue'
 </script>
 
 <script lang="ts">
