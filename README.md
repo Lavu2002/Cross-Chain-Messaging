@@ -45,14 +45,11 @@ A modern, responsive dashboard for **simulated cross-chain token swaps and messa
 - Node.js (v16 or later)
 - npm or yarn
 
-### Install
+### Install & Run
 
 ```bash
 npm install
 # or
 yarn install
 
-**### Run**
-
-```bash
 npm run dev
