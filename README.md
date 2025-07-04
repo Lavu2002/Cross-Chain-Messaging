@@ -52,7 +52,7 @@ npm install
 # or
 yarn install
 
-### Run
+**### Run**
 
 ```bash
 npm run dev
