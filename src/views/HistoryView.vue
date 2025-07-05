@@ -40,4 +40,21 @@ import TransactionHistory from '@/components/TransactionHistory.vue'
   align-items: center;
   flex: 1;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 24px 16px 16px 16px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header h1 {
+    font-size: 1.6rem;
+  }
+}
 </style>

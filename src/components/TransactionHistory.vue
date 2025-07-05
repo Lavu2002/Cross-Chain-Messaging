@@ -108,4 +108,47 @@ const history = [
   background: #f7b731;
   color: #23243a;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .history-card {
+    max-width: 95%;
+    margin: 16px auto;
+    padding: 16px 12px 12px;
+  }
+
+  .history-table {
+    font-size: 0.9rem;
+  }
+
+  .chain {
+    font-size: 0.85em;
+  }
+
+  .status {
+    font-size: 0.9em;
+    padding: 1px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-card {
+    max-width: 98%;
+    margin: 8px auto;
+    padding: 12px 8px 8px;
+  }
+
+  .history-table {
+    font-size: 0.8rem;
+  }
+
+  .chain {
+    font-size: 0.8em;
+  }
+
+  .status {
+    font-size: 0.85em;
+    padding: 1px 6px;
+  }
+}
 </style>

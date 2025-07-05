@@ -33,3 +33,17 @@ a,
     padding: 0 2rem;
   }
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  #app {
+    padding: 1rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #app {
+    padding: 0.5rem;
+  }
+}

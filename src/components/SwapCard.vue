@@ -71,10 +71,10 @@
 
       <!-- Info -->
       <div class="swap-info-row">
-        <span class="conversion-rate">
+        <small class="conversion-rate">
           1 {{ sendToken }} ≈ {{ conversionRate }} {{ receiveToken }}
-        </span>
-        <span class="gas-fee">Gas: {{ gasFee }} | Route: {{ optimalRoute }}</span>
+        </small>
+        <small class="gas-fee">Gas: {{ gasFee }} | Route: {{ optimalRoute }}</small>
       </div>
 
       <!-- Submit Button -->
@@ -351,5 +351,75 @@ function resetSwap() {
 }
 .timeline li.active::before {
   background: #5b6bff;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .swap-card {
+    width: 95%;
+    margin: 16px auto;
+    padding: 20px 16px 16px;
+  }
+
+  .swap-title {
+    font-size: 1.1rem;
+  }
+
+  .swap-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .swap-info-row {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .loader-text {
+    font-size: 1rem;
+  }
+
+  .timeline {
+    width: 220px;
+  }
+
+  .timeline li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swap-card {
+    width: 98%;
+    margin: 8px auto;
+    padding: 16px 12px 12px;
+  }
+
+  .swap-title {
+    font-size: 1rem;
+  }
+
+  .section-label {
+    font-size: 0.9rem;
+  }
+
+  .swap-btn {
+    font-size: 0.9rem;
+    height: 44px;
+  }
+
+  .status-row {
+    font-size: 0.8rem;
+  }
+
+  .timeline {
+    width: 200px;
+  }
+
+  .timeline li {
+    font-size: 0.85rem;
+  }
 }
 </style>

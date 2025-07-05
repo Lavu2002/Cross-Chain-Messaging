@@ -77,4 +77,49 @@ export default {
   font-weight: 600;
   margin-top: 4px;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 24px 16px 16px 16px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .dashboard-footer {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  .stat-value {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .dashboard-footer {
+    font-size: 0.9rem;
+  }
+
+  .stat-value {
+    font-size: 1rem;
+  }
+}
 </style>
